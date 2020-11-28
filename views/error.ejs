@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Make site responsive on mobile/tablet -->
+		<meta name="Tokunbo Motors | We import any used cars to Nigeria for sale" 
+			  content="Get the best prices on imported used cars for sale. Choose from Toyota, Lexus, Honda, Mercedes and many more. Tell us what you are interested in and we will bring it to Nigeria exclusively for you. No need to worry about the shipping and customs, we will take care of that." />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title><%-title%></title>
+		<!-- <link rel="shortcut icon" type="image/png" href="/images/favicon.png"> -->
+		
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+		 <!-- Materialize Icon -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- Parallax effec -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+		<script src='/script/index.js'></script>
+<script src="/parallax.min.js"></script>
+		
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+		
+	</head>	
+	
+		<body>
+			
+			
+			
+	<nav class="navbar  navbar-expand-lg navbar-dark fixed-top"
+		 id='mainNavbar' style='background-color:rgb(18, 35, 56);'> 
+			<!-- navbar-expand-lg -->
+	  <a class="navbar-brand" href="/" style="font-weight:bold; font-size:1.75em;">
+		  <span style="color:#FD3447;font-weight:bold;font-size:2em;">T</span>M</a>
+			
+	  <button class="navbar-toggler"  data-toggle="collapse" 
+			  data-target="#navbarNav"  aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon" ></span>
+	  </button>
+		
+		
+<div class="collapse navbar-collapse justify-content-end" 
+	 id="navbarNav">
+			<ul class="navbar-nav ">
+			  <li class="nav-item ">
+				<a class="nav-link" href="#how-we-work" >
+					How we work</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#about-us">
+					About us</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#contact">
+					Contact us</a>
+			  </li>
+			</ul>
+  </div>	
+	</nav>
+			
+			 <div class="container">
+				<%if(error && error.length>0){ %>
+				<div class="alert alert-danger" role="alert">
+					<%=error%>
+				</div>
+					<%} %>
+					<% if(success && success.length>0){ %>
+				<div class="alert alert-success" role="alert">
+					<%= success %>
+				</div>
+					<% } %>
+			</div>
+
+<div id="error-page">
+	<h4 id="error-page-title">
+		<%-title%>
+	</h4>
+	<p id="error-page-content">
+		 Page not found
+	</p>
+	<div class='d-flex justify-content-center'>
+		<a id='go-home' class='btn' href='/'>
+		Home
+	</a>
+	</div>
+	
+</div>
+
+
+			
+			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>			
+			
+<% if(page==="landing"){ %>
+   <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+<%}%>
+
+<div class="foot" style='background-color:rgb(18, 35, 56); color:white;'>
+	
+			 <div class="col-m-8 text-center">
+			 
+				© <script type="text/javascript">
+                document.write(new Date().getFullYear());</script>
+	</div>
+		
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,504 @@
+
+/* ================ */
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+scroll-behavior:smooth;
+}
+
+html{
+	height:100%;
+	overflow-x:hidden;
+}
+body:not(nav){
+    display: flex;
+    flex-direction:column;
+    min-height:100%;
+    overflow-x:hidden;
+	/* overflow: hidden; */
+	font-family: 'Open Sans', sans-serif;
+
+	font-weight:500;
+}
+@font-face {
+    font-family: Custom-font;
+    src: url(/customFont/Kiez-Slanted.ttf);
+}
+/* Nav */
+#mainNavbar{
+	height:80px;
+}
+/* .nav-brand{
+	font-weight:bold;
+	font-size:2em;
+	
+} */
+.logo{
+	height: auto;
+    width: auto;
+    max-height: 42px;
+    max-width: 42px;
+} 
+.navbar.scrolled {
+    background: rgba(18, 35, 56,0.7);
+    transition: background 500ms;
+}
+
+#navbarNav .navbar-nav{
+	background:rgba(18, 35, 56,0.7);
+}
+@media(min-width: 990px){
+	#navbarNav .navbar-nav{
+	background:transparent;
+}
+}
+#navbarNav li a{
+	color: white;
+}
+#navbarNav li a:hover{
+	color:#FD3447;
+	border-bottom: 1px solid #FD3447;
+	/* border-left: 1px solid #FD3447; */
+}
+/* .nav-link: hover{
+	color:#FD3447;
+} */
+nav a:hover{
+	color:#FD3447;
+}
+
+
+.section-title{
+	font-family: Custom-font;
+	text-shadow:0px 0px 10px rgba(0,0,0,0.4);
+}
+/* =============== */
+
+
+
+#hero1{
+	display: flex;
+	height:80vh;
+	justify-content:start;
+	align-items:center;
+    background-image:url("/images/hero1-car-large.jpg");
+	background-size: cover;
+	background-position: center;
+	color:white;
+	position:relative;
+	/* font-family: Custom-font ; */
+	
+	
+}
+#hero1 #hero1-title{
+	/* font-size:70px; */
+	font-weight:bold;
+}
+/* @media(max-width: 600px){
+#hero1 #hero1-title{
+	 font-family: Custom-font ; 
+	font-size:50px;
+}
+} */
+
+
+#hero1 #paragraph-title{
+	/* font-family: 'Open Sans', sans-serif; */
+	font-size: 20px;
+}
+#hero1 #call-to-action{
+	/* font-family: 'Open Sans', sans-serif; */
+	font-size: 20px;
+	margin-top:2em;
+	padding: 10px;
+	background-color:#fd3447;
+	/* padding:5px; */
+	color:white;
+	box-shadow:none;
+}
+#hero1 #call-to-action:hover{
+	box-shadow:0px 0px 10px rgba(225,225,225,0.5);
+}
+@media(min-width: 600px){/*styles if the width is greater than or equal to 600px*/
+	#hero1 #hero1-title{
+		/* font-family: Custom-font ; */
+		/* font-size:none; */
+		/* font-weight:bold; */
+		font-size:70px;
+	}
+}
+@media(max-width: 600px){/*styles if the width is less than or equal to 600px*/
+	
+	#hero1 #hero1-title{
+		/* font-family: Custom-font ; */
+		/* font-size:none; */
+		/* font-weight:bold; */
+		/* font-size:2em; */
+	}
+		#hero1 #paragraph-title{
+		/* font-family: 'Open Sans', sans-serif; */
+		font-size: 20px;
+	}
+	#hero1 #call-to-action{
+		font-size:20px;
+	}
+	#hero1{
+		padding:0px;
+	}
+}
+/* parallax */
+.parallax-window {
+    /* min-height: 600px; */
+    background: transparent;
+}
+
+
+#hero1 > * {
+	position:relative;
+	z-index:2;
+}
+
+#hero1:after{
+	content:"";
+	position:absolute;
+	left:0; right:0;
+	width:100%; height:100%;
+	background-color:rgba(0, 0, 0, 0.5);
+}
+
+
+#hero1-title{
+	font-weight:bold;
+	color:#FD3447;
+	/* text-shadow:0px 0px 10px rgba(0,0,0,0.7); */
+}
+
+/* #call-to-action{
+	background-color:#fd3447;
+	padding:5px;
+	color:white;
+	box-shadow:0px 0px 10px rgba(225,225,225,0.5)
+} */
+
+
+.about-content{
+	/* padding:10px; */
+}
+
+ #about-us{
+	padding:50px
+} 
+
+#about-title{
+	color:#FD3447;
+	font-weight:bold;
+	text-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+#about-us-content-wrapper{
+	padding:50px;
+}
+
+#about-us-content-left{
+	/* border-right: 20px solid #FD3447; */
+	padding:25px;
+}
+#about-us-content-right{
+	/* padding:auto; */
+	border-left: 20px solid #FD3447;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+@media(max-width: 600px){
+	#about-us-content-right{
+		border-left:none;
+		/* font-size:2rem; */
+		margin-top:20px;
+		
+	}
+	#about-us-content-right p{
+		margin-bottom:20px;
+	}
+	/* #about-us-content-left{
+		justify-content:center;
+	} */
+	#about-us-content-wrapper{
+	padding:10px;
+   }
+	#about-us{
+		padding: 0px;
+	}
+	
+}
+
+/*  ---------------------------------------------*/
+
+
+/* ============================== HOW WE WORK =======================================*/
+.how-we-work-content{
+	text-align:center;
+	
+}
+
+#how-body-wrapper{
+	margin-top:50px;
+}
+#how-we-work{
+	display:flex;
+	flex-direction:column;
+	/* height:600px; */
+	background-color:#FD3447;
+	color: white;
+	padding:100px;
+}
+
+
+#how-title-wrapper{
+	border-left:200px solid white;
+	border-right:200px solid white;
+	
+}
+
+
+/* #how-title-wrapper h1{
+	text-shadow:0px 0px 10px rgba(0,0,0,0.5);
+} */
+
+
+.material-icons{
+	font-size: 100px;
+	color:white;
+}
+
+/* --------------HOW WE ( MOBILE STYLING ) ---------- */
+@media(max-width: 600px){
+   #how-title-wrapper{
+	border-left:none;
+	border-right:none;
+
+	}
+	#how-we-work{
+	padding:50px;
+	}
+	/* #how-we-work{
+		padding:50px;
+		font-size:2rem;
+	}
+	#how-we-work h3{
+		font-size:1.25em;
+		
+	} 
+	#how-we-work h5{
+		font-size:2em;
+	}
+	.material-icons{
+	font-size: 2em;
+	color:white;
+    } */
+}
+/* ------------------------------------------------------------ */
+
+
+
+
+/*=========================== FAQ ===========================*/
+.hero-FAQ{
+	padding:100px auto;
+}
+
+
+.hero-FAQ-title{
+	color:#122338;/*#FD3447;*/
+	font-weight: bold;
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero-FAQ-title-wrapper{
+	margin: 100px auto;
+}
+
+.show-hide{
+	display:none;
+}
+
+
+#answer1,
+#answer2,
+#answer3{
+	color:black;
+}
+/* .hero-5-list-wrapper{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+} */
+.hero-FAQ-list {
+	margin: 0px auto 200px auto;
+	padding:0px;
+	 /* margin:0 5px 0 -15px */
+	/* list-style:url("https://www.flaticon.com/authors/freepik") */
+	
+}
+
+.hero-FAQ-list li{
+	border-bottom:2px solid rgba(253, 52, 71, 0.2);
+	margin:30px auto;
+	list-style:none;
+	padding-left: 1.3em;
+	
+}
+.hero-FAQ-list li:before{
+	content: "\f105";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+  color:#FD3447;
+	list-style:inside;
+}
+.hero-FAQ-list li:before:active{
+	content: "\f107";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+	color: #122338;
+}
+
+.hero-FAQ-list-item >h5{
+	cursor:pointer;
+	color:#122338;
+}
+
+/*--------------------- FAQ (MOBILE) --------------------------------*/
+@media(max-width: 600px){
+	.hero-FAQ{
+	padding:10px auto;
+     }
+	.hero-FAQ-list {
+	margin: 0px auto 50px auto;
+	
+     }
+	.hero-FAQ-title-wrapper{
+	  margin: 50px auto;
+     }
+}
+
+/* -------------------------------- */
+
+
+
+/*===============================  COMTACT ===========================================*/
+
+
+#contact{
+	background-color:#122338;
+	color:white;
+	padding:50px;
+	
+}
+
+#contact-wrapper{
+	border-left: 20px solid #FD3447;
+	/* padding:50px; */
+}
+
+#contact #contact-header{
+	color:#FD3447;
+	padding-left:50px;
+	
+}
+#info-list{
+	display:flex;
+	flex-direction:column;
+}
+.required-input{
+	color:#FD3447;
+}
+#contact-content-wrapper{
+	padding:50px;
+}
+#contact-content-wrapper h4{
+	color:#FD3447;
+}
+#contact-content-wrapper p{
+	font-size:20px;
+}
+#contact-content-wrapper #info-list{
+	text-align:right;
+}
+#submit-button{
+	padding:5px;
+	color:#dbd9d3;
+	background-color:#FD3447;
+	border-radius:5px;
+}
+/*--------------------- CONTACT (MOBILE) --------------------------------*/
+@media(max-width: 600px){
+	
+	#contact-wrapper{
+	border-left: none;
+     }
+	#contact{
+		padding: 50px auto;
+	}
+	
+	#contact #contact-header{
+	padding-left:0px;
+	text-align: center;
+	padding-bottom:20px;
+	}
+	
+	#contact-content-wrapper{
+	padding:0px;
+	}
+	#info-list{
+		display:flex;
+		justify-content:column;
+		text-align:left;
+		margin-bottom:20px;
+		border-bottom: 2px solid rgba(253, 52, 71, 0.2)
+	}
+	#contact-content-wrapper #info-list{
+	text-align:center;
+    }
+	#hide-number{
+		display:none;
+	}
+	#contact-content-form{
+	 padding:0px;
+	}
+	
+}
+
+/* -------------------------------- */
+
+
+
+/* ====================================   FOOTER   ============================= */
+
+.foot{
+display:flex;
+justify-content:center;
+align-items:center;
+background-color: #dbd9d3;
+height:50px;
+color:#122338;
+margin-top:auto;
+}
+
+/* --------------------------------------------- */
+/* =========================== ERROR PAGE =========================*/
+#error-page{
+	margin: 200px auto;
+}
+
+#error-page #go-home{
+	background: rgb(18, 35, 56);
+	padding:5px;
+	color: white;
+	border-radius:5px;
+}
