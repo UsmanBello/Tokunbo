@@ -82,7 +82,7 @@ nav a:hover{
 	height:80vh;
 	justify-content:start;
 	align-items:center;
-    background-image:url("/images/hero1-car-large.jpg");
+    /* background-image:url("/images/hero1-car-large.jpg"); */
 	background-size: cover;
 	background-position: center;
 	color:white;
